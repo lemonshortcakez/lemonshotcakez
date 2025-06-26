@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LemonShortCakez 🍋</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #fff7c8, #ffe1f0, #d6f7ff, #f3e8ff);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      padding: 2rem;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-family: 'Caveat', cursive;
+      color: #f4b400;
+      animation: floaty 3s ease-in-out infinite;
+      text-shadow: 1px 1px #fff2cc;
+    }
+
+    @keyframes floaty {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+    }
+
+    .kaomoji {
+      font-size: 2rem;
+      margin-top: 0.5rem;
+      color: #cc88cc;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .search-bar input {
+      padding: 0.6rem 1.2rem;
+      width: 70%;
+      border: 2px dashed #ffc0cb;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: 'Caveat', cursive;
+      background-color: #fffaf0;
+      outline: none;
+    }
+
+    .product-section {
+      margin-top: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #8c6bb1;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-family: 'Caveat', cursive;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .product-card {
+      width: 200px;
+      background: #fff;
+      border: 3px dashed #ffc6d1;
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s;
+      box-shadow: 3px 3px 6px rgba(0,0,0,0.05);
+    }
+
+    .product-card:hover {
+      transform: rotate(-2deg) scale(1.05);
+      background: #fff7f9;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px rgba(255, 204, 204, 0.4);
+    }
+
+    .product-name {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #444;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 1rem;
+      color: #888;
+      font-family: 'Caveat', cursive;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍋 LemonShortCakez 🍋</h1>
+    <div class="kaomoji">˚₊‧꒰ა ☆ ໒꒱‧₊˚</div>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search for cute things ✧">
+  </div>
+
+  <!-- ✨ Jewelry -->
+  <div class="product-section">
+    <div class="section-title">Jewelry ✨</div>
+    <div class="products">
+      <div class="product-card" data-name="boho jhumka">
+        <img src="your-image1.jpg" alt="Boho Jhumka">
+        <div class="product-name">Boho Jhumka</div>
+      </div>
+      <div class="product-card" data-name="moon earrings">
+        <img src="your-image2.jpg" alt="Moon Earrings">
+        <div class="product-name">Moon Earrings</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧸 Keychains -->
+  <div class="product-section">
+    <div class="section-title">Keychains 🧸</div>
+    <div class="products">
+      <div class="product-card" data-name="miffy keychain">
+        <img src="your-image3.jpg" alt="Miffy Keychain">
+        <div class="product-name">Miffy Keychain</div>
+      </div>
+      <div class="product-card" data-name="breakfast keychain">
+        <img src="your-image4.jpg" alt="Breakfast Keychain">
+        <div class="product-name">Breakfast Keychain</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧶 Crochet -->
+  <div class="product-section">
+    <div class="section-title">Crochet 🧶</div>
+    <div class="products">
+      <div class="product-card" data-name="crochet flower">
+        <img src="your-image5.jpg" alt="Crochet Flower">
+        <div class="product-name">Crochet Flower</div>
+      </div>
+      <div class="product-card" data-name="crochet bunny">
+        <img src="your-image6.jpg" alt="Crochet Bunny">
+        <div class="product-name">Crochet Bunny</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧼 Clay -->
+  <div class="product-section">
+    <div class="section-title">Clay 🌼</div>
+    <div class="products">
+      <div class="product-card" data-name="clay ring">
+        <img src="your-image7.jpg" alt="Clay Ring">
+        <div class="product-name">Clay Ring</div>
+      </div>
+      <div class="product-card" data-name="clay charm">
+        <img src="your-image8.jpg" alt="Clay Charm">
+        <div class="product-name">Clay Charm</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 LemonShortCakez 🍋 All handmade with magic ♡
+  </div>
+
+  <script>
+    const search = document.getElementById('search');
+    const cards = document.querySelectorAll('.product-card');
+
+    search.addEventListener('input', function () {
+      const term = this.value.toLowerCase();
+      cards.forEach(card => {
+        const name = card.getAttribute('data-name');
+        if (name.includes(term)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LemonShortCakez 🍋</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #fff7c8, #ffe1f0, #d6f7ff, #f3e8ff);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      padding: 2rem;
+      color: #333;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3.2rem;
+      color: #6a79b6;
+      background-size: contain;
+      padding: 1rem;
+    }
+
+    .kaomoji {
+      font-size: 1.6rem;
+      color: #cc88cc;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .product-card {
+      width: 220px;
+      background: #fff;
+      border: 3px dashed #ffc0cb;
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      background-color: #fff5f8;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-name {
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+
+    .product-price {
+      color: #888;
+      margin: 0.3rem 0;
+    }
+
+    .add-btn {
+      background: #ffd1dc;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .cart-section, .checkout-section {
+      max-width: 600px;
+      background: #fff4fa;
+      padding: 2rem;
+      margin: 3rem auto;
+      border-radius: 20px;
+    }
+
+    .cart-section h2, .checkout-section h2 {
+      font-family: 'DM Serif Display', serif;
+      text-align: center;
+      color: #6a79b6;
+      margin-bottom: 1rem;
+    }
+
+    .cart-items {
+      margin-bottom: 1rem;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #ddd;
+      padding: 0.5rem 0;
+    }
+
+    .total {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .checkout-form input,
+    .checkout-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 2px dashed #ffd1dc;
+      border-radius: 10px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .submit-btn {
+      background: #fcd34d;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>LEMONSHORTCAKEZ</h1>
+    <div class="kaomoji">˚₊‧꒰ა ☆ handmade pastel cuties ☆ ໒꒱‧₊˚</div>
+  </header>
+
+  <!-- 🛍 Product List -->
+  <div class="products" id="product-list">
+    <!-- JS adds product cards here -->
+  </div>
+
+  <!-- 🛒 Cart Section -->
+  <div class="cart-section">
+    <h2>Your Cart</h2>
+    <div class="cart-items" id="cart-items">
+      <p>No items yet...</p>
+    </div>
+    <div class="total">Total: ৳<span id="total">0</span></div>
+  </div>
+
+  <!-- 🧾 Checkout Section -->
+  <div class="checkout-section">
+    <h2>Checkout</h2>
+    <form class="checkout-form" onsubmit="handleCheckout(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="address" rows="3" placeholder="Your Address" required></textarea>
+      <button type="submit" class="submit-btn">✓ Submit Order</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    © 2025 LemonShortCakez 🍋 All handmade with love and magic
+  </div>
+
+  <script>
+    const products = [
+      { name: "Boho Jhumka", price: 300, image: "your-image1.jpg" },
+      { name: "Moon Earrings", price: 250, image: "your-image2.jpg" },
+      { name: "Miffy Keychain", price: 200, image: "your-image3.jpg" },
+      { name: "Crochet Flower", price: 220, image: "your-image4.jpg" },
+      { name: "Clay Ring", price: 180, image: "your-image5.jpg" }
+    ];
+
+    const cart = [];
+    const productList = document.getElementById('product-list');
+    const cartItems = document.getElementById('cart-items');
+    const totalDisplay = document.getElementById('total');
+
+    function renderProducts() {
+      products.forEach((p, index) => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <img src="${p.image}" alt="${p.name}">
+          <div class="product-name">${p.name}</div>
+          <div class="product-price">৳${p.price}</div>
+          <button class="add-btn" onclick="addToCart(${index})">Add to Cart</button>
+        `;
+        productList.appendChild(card);
+      });
+    }
+
+    function addToCart(index) {
+      cart.push(products[index]);
+      updateCart();
+    }
+
+    function updateCart() {
+      cartItems.innerHTML = '';
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p>No items yet...</p>';
+        totalDisplay.textContent = '0';
+        return;
+      }
+
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price;
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'cart-item';
+        itemDiv.innerHTML = <span>${item.name}</span><span>৳${item.price}</span>;
+        cartItems.appendChild(itemDiv);
+      });
+
+      totalDisplay.textContent = total;
+    }
+
+    function handleCheckout(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const address = document.getElementById('address').value.trim();
+
+      if (!name || !email || !address) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      alert(🎉 Order placed!\nThank you, ${name}!\nWe'll ship your cuties to:\n${address});
+      cart.length = 0;
+      updateCart();
+      e.target.reset();
+    }
+
+    renderProducts();
+  </script>
+
+</body>
+</html>
