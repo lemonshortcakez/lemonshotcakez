@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LemonShortCakez 🍋</title>
+  <style>
+    /* 🌼 Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fff7c8, #ffe1f0, #d6f7ff, #f3e8ff);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      padding: 2rem;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ffcf48;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+    }
+
+    .kaomoji {
+      font-size: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .search-bar input {
+      padding: 0.5rem 1rem;
+      width: 70%;
+      border: 2px dashed #ffc0cb;
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .product-section {
+      margin-top: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #8c6bb1;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .product-card {
+      width: 200px;
+      background: #fff;
+      border: 3px dashed #ffb6c1;
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: rotate(-2deg) scale(1.05);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-name {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 1rem;
+      color: #888;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍋 LemonShortCakez 🍥</h1>
+    <div class="kaomoji">˚₊‧꒰ა ☆ ໒꒱‧₊˚</div>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search products... ✧">
+  </div>
+
+  <!-- 🔮 Jewelry Section -->
+  <div class="product-section">
+    <div class="section-title">Jewelry ✨</div>
+    <div class="products">
+      <div class="product-card" data-name="boho jhumka">
+        <img src="your-image1.jpg" alt="Boho Jhumka">
+        <div class="product-name">Boho Jhumka</div>
+      </div>
+      <div class="product-card" data-name="moon earrings">
+        <img src="your-image2.jpg" alt="Moon Earrings">
+        <div class="product-name">Moon Earrings</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧸 Keychains Section -->
+  <div class="product-section">
+    <div class="section-title">Keychains 🧸</div>
+    <div class="products">
+      <div class="product-card" data-name="miffy keychain">
+        <img src="your-image3.jpg" alt="Miffy Keychain">
+        <div class="product-name">Miffy Keychain</div>
+      </div>
+      <div class="product-card" data-name="breakfast keychain">
+        <img src="your-image4.jpg" alt="Breakfast Keychain">
+        <div class="product-name">Breakfast Keychain</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧵 Crochet Section -->
+  <div class="product-section">
+    <div class="section-title">Crochet 🧶</div>
+    <div class="products">
+      <div class="product-card" data-name="crochet flower">
+        <img src="your-image5.jpg" alt="Crochet Flower">
+        <div class="product-name">Crochet Flower</div>
+      </div>
+      <div class="product-card" data-name="crochet bunny">
+        <img src="your-image6.jpg" alt="Crochet Bunny">
+        <div class="product-name">Crochet Bunny</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧼 Clay Section -->
+  <div class="product-section">
+    <div class="section-title">Clay 🌼</div>
+    <div class="products">
+      <div class="product-card" data-name="clay ring">
+        <img src="your-image7.jpg" alt="Clay Ring">
+        <div class="product-name">Clay Ring</div>
+      </div>
+      <div class="product-card" data-name="clay charm">
+        <img src="your-image8.jpg" alt="Clay Charm">
+        <div class="product-name">Clay Charm</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 LemonShortCakez 🍋 | All handmade with love ♡
+  </div>
+
+  <script>
+    const search = document.getElementById('search');
+    const cards = document.querySelectorAll('.product-card');
+
+    search.addEventListener('input', function () {
+      const term = this.value.toLowerCase();
+      cards.forEach(card => {
+        const name = card.getAttribute('data-name');
+        if (name.includes(term)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
